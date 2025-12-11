@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #ffdde1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  z-index: 10;
+  font-size: 3rem;
+  color: #d60055;
+  text-shadow: 0 0 10px white;
+  text-align: center;
+}
+
+.symbol {
+  position: absolute;
+  font-size: 25px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh) scale(0.6); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-20vh) scale(1.2); opacity: 0; }
+}
+
+.fade { opacity: 0; transition: opacity 1.5s ease; }
+.fade.show { opacity: 1; }
+
+#startBtn {
+  display: none;
+  padding: 15px 35px;
+  font-size: 1.4rem;
+  background: #ff4d79;
+  border: none;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255,0,80,0.5);
+  margin-top: 20px;
+}
+
+#startBtn:hover { transform: scale(1.1); background: #ff2d64; }
+
+.slideshow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 800px;
+  margin-top: 30px;
+  position: relative;
+}
+
+img, video {
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  object-fit: contain;
+  border-radius: 40px;
+  display: none;
+  margin-bottom: 50px;
+}
+
+.text {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #ff2d64;
+  text-shadow: 0 0 15px rgb(239,153,153);
+  margin-top: 20px;
+  width: 100%;
+}
+
+#mainText { font-size: 3rem; text-align: center; opacity: 0; transition: opacity 1.4s ease; }
+#mainText.show { opacity: 1; }
+
+#letterContainer {
+  display: none; /* başta gizli */
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+#envelope {
+  position: relative;
+  width: 200px;
+  height: 120px;
+}
+
+#envelope .body {
+  width: 100%;
+  height: 100%;
+  background: #ff4d79;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+#envelope .flap {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 60px solid #ff2d64;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform-origin: top center;
+  transition: transform 0.5s ease;
+}
+
+#envelope.open .flap {
+  transform: rotateX(180deg);
+}
+
+#paper {
+  width: 180px;
+  min-height: 200px;
+  background: #fff;
+  border-radius: 5px;
+  margin-top: -50px;
+  padding: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: none;
+  z-index: 0;
+}
