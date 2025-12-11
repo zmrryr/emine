@@ -53,7 +53,7 @@ setTimeout(() => {
 const slides = [
   {
     type: "image",
-    src: "webside/pics/gun.png",
+    src: "gun.png",
     text: "Birlikte olduğumuz gün sayısı",
   },
   {
@@ -163,6 +163,7 @@ function showLetter() {
     }
   });
 }
+
 
 
 
