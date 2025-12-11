@@ -53,38 +53,38 @@ setTimeout(() => {
 const slides = [
   {
     type: "image",
-    src: "/pics/gun.png",
+    src: "webside/pics/gun.png",
     text: "Birlikte olduğumuz gün sayısı",
   },
   {
     type: "image",
-    src: "/pics/duvar.jpg",
+    src: "webside/pics/duvar.jpg",
     text: "Sana yaptığım ilk duvar kağıdı",
   },
-  { type: "image", src: "/pics/cizim.gif", text: "Muzelere layik cizimimiz" },
+  { type: "image", src: "webside/pics/cizim.gif", text: "Muzelere layik cizimimiz" },
   {
     type: "image",
-    src: "/pics/ilkfoto.jpg",
+    src: "webside/pics/ilkfoto.jpg",
     text: "Sana uzun uzun baktığım ilk fotoğraf",
   },
   {
     type: "video",
-    src: "/pics/cuzdan.mp4",
+    src: "webside/pics/cuzdan.mp4",
     text: "İlk cüzdanına beni koyduğun an",
   },
-  { type: "video", src: "/pics/not.mp4", text: "Bana yaptığın ilk not" },
-  { type: "image", src: "/pics/hediye.jpg", text: "Bana ilk aldigin hediye" },
+  { type: "video", src: "webside/pics/not.mp4", text: "Bana yaptığın ilk not" },
+  { type: "image", src: "webside/pics/hediye.jpg", text: "Bana ilk aldigin hediye" },
   {
     type: "image",
-    src: "/pics/duvar2.jpg",
+    src: "webside/pics/duvar2.jpg",
     text: "Beni yaptigin bir duvar kagidi",
   },
   {
     type: "video",
-    src: "/pics/tiktok.mp4",
+    src: "webside/pics/tiktok.mp4",
     text: "Bana yaptigin tiktok(cok tatli)",
   },
-  { type: "image", src: "/pics/velet.jpg", text: "Veletligimizin birlesimi" },
+  { type: "image", src: "webside/pics/velet.jpg", text: "Veletligimizin birlesimi" },
 ];
 
 let index = 0;
@@ -163,3 +163,4 @@ function showLetter() {
     }
   });
 }
+
